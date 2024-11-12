@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Forms</title>
+    <link rel="icon" href="/images/jinx.png" type="images/png">
+</head>
+<body>
+    <form action="index.php" method="post" enctype="multipart/form-data">
+        <label for="username">username:</label>
+        <input type="text" id="username" minlength="3" maxlength="12" placeholder="sugmadeek" required><br>
+        
+        <label for="password">password:</label>
+        <input type="password" id="password" minlength="3" maxlength="12" placeholder="P@ssword69" required><br>
+        
+        <label for="email">email:</label>
+        <input type="email" id="email" placeholder="latom@gmail.com" required><br>
+        
+        <label for="phone">phone #:</label>
+        <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br>
+        
+        <label for="birthday">birthday:</label>
+        <input type="date" id="birthday" required><br>
+
+        <label for="quantity">quantity:</label>
+        <input type="number" id="quantity" min="0" max="100" value="69" required><br>
+
+        <label for="title">title:</label>
+        
+        <label for="Mr.">Mr.</label>
+        <input type="radio" id="Mr." value="Mr." name="title" required>
+        <label for="Ms.">Ms.</label>
+        <input type="radio" id="Ms." value="Ms." name="title">
+        <label for="PhD.">PhD.</label>
+        <input type="radio" id="PhD." value="PhD." name="title"><br>
+
+        <label for="payment">payment</label>
+        <select id="payment">
+            <option value="paypal">paypal</option>
+            <option value="visa">visa</option>
+            <option value="giftcard">giftcard</option>   
+            <option value="cashOnDelivery">cash on delivery</option>
+        </select><br>
+
+        <label for="subscribe">subscribe:</label>
+        <input type="checkbox" id="subscribe" required><br>
+
+        <label for="comment">comment:</label>
+        <textarea id="comment" rows="4" cols="30"></textarea><br>
+
+        <label for="file">file:</label>
+        <input type="file" id="file" accept="image/png, image/jpeg"><br>
+
+        <input type="reset"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
