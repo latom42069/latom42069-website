@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TricyBook</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background: #f0f0f0;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            width: 150px;
+            padding: 15px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #fff;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+        .passenger { background-color: #ffea00; color: #000; }
+        .driver { background-color: #00bfff; color: #fff; }
+        .admin, .signup {
+            background-color: #d3d3d3;
+            color: #000;
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">TricyBook</div>
+        <div class="logo">🚲🚖</div>
+        <button class="btn passenger" onclick="window.location.href='https://tricybook-pu7s7qqxx-hdl-projects-2596197c.vercel.app';">Passenger</button>
+        <button class="btn driver" onclick="window.location.href='https://tricybook-ok0k7t059-hdl-projects-2596197c.vercel.app';">Driver</button>
+        <button class="btn admin" onclick="window.location.href='https://tricybook-fofawa4me-hdl-projects-2596197c.vercel.app';">Administrator</button>
+    </div>
+</body>
+</html>
