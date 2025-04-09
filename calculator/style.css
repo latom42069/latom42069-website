@@ -11,6 +11,7 @@ body{
     background-color: hsl(0, 0%, 15%);
     border-radius: 15px;
     max-width: 500px;
+    width: 100%;
     overflow: hidden;
 }
 #display{
@@ -51,4 +52,29 @@ button:active{
 }
 .operator-btn:hover{
     background-color: hsl(25, 75%, 60%);
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+    #calculator {
+        /* Use a bit of margin or width adjustments on very small screens */
+        width: 95%;
+        border-radius: 10px;
+    }
+
+    #display {
+        font-size: 4rem; /* Reduce font size for smaller devices */
+        padding: 15px;
+    }
+
+    #keys {
+        gap: 5px;
+        padding: 15px;
+    }
+
+    button {
+        width: 70px;    /* Scale down the button size */
+        height: 70px;
+        font-size: 2rem;
+    }
 }
