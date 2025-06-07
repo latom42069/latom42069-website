@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TricyBook</title>
+  <link rel="icon" href="https://latom42069.github.io/latom42069-website/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #00c6ff;
+      --text-color: #ffffff;
+      --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.7);
+    }
+    
+    /* Universal Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Animated Gradient Background on Body */
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(45deg, #4b79a1, #283e51, #4b79a1, #283e51);
+      background-size: 400% 400%;
+      animation: gradientAnimation 4s ease infinite;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-color);
+      overflow: hidden;
+    }
+    
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Container with Frosted-Glass Effect */
+    .container {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-card);
+      width: 400px;
+      max-width: 95%;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+      overflow: hidden;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Liquid Text Animations for Logo & Title */
+    @keyframes textSlideIn {
+      from { opacity: 0; transform: translateY(-10px) scale(0.8); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes liquid {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .logo, .title {
+      background: linear-gradient(90deg, #ff8c00, hsl(349, 100%, 59%), hsl(176, 100%, 50%), #62c2fe);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textSlideIn 1s ease-out, liquid 4s infinite alternate ease-in-out;
+    }
+    
+    .logo {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    
+    .title {
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    
+    /* Button Base Styles */
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-size: 200% 200%;
+      overflow: hidden;
+    }
+    
+    /* Button Hover Effect: More pronounced upward movement */
+    .btn:hover {
+      transform: translateY(-10px) scale(1.1);
+      box-shadow: 0 8px 20px rgba(0,198,255,0.6);
+    }
+    
+    .btn:active {
+      transform: scale(0.97);
+    }
+    
+    /* Ripple Effect on Button Click */
+    .btn::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      width: 20px;
+      height: 20px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 50%;
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.6s, opacity 0.6s;
+    }
+    
+    .btn:active::after {
+      transform: translate(-50%, -50%) scale(10);
+      opacity: 1;
+      transition: transform 0s, opacity 0s;
+    }
+    
+    /* Specific Button Variants with Modern Colors */
+    .btn.passenger {
+      /* Warm coral to peach gradient */
+      background-image: linear-gradient(45deg, #ff8c00, hsl(349, 100%, 59%));
+      color: #000;
+    }
+    .btn.driver {
+      /* Deep azure to sky blue gradient */
+      background-image: linear-gradient(45deg, hsl(203, 100%, 35%), hsl(176, 100%, 50%));
+      color: #fff;
+    }
+    .btn.admin {
+      /* Refined cool gray gradient */
+      background-image: linear-gradient(45deg, hsl(0, 0%, 66%), hsl(0, 0%, 94%));
+      color: #000;
+      display: block;
+      width: 100%;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 480px) {
+      .title { font-size: 2.25rem; }
+      .btn { font-size: 0.9rem; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">🚲🚖</div>
+    <div class="title">TricyBook</div>
+    <button class="btn passenger" onclick="window.location.href='https://tricybook-73ndk9bkf-hdl-projects-2596197c.vercel.app';">
+      Passenger
+    </button>
+    <button class="btn driver" onclick="window.location.href='https://tricybook-dmkbq4jbz-hdl-projects-2596197c.vercel.app';">
+      Driver
+    </button>
+    <button class="btn admin" onclick="window.location.href='https://tricybook-64z6zr0ok-hdl-projects-2596197c.vercel.app';">
+      Administrator
+    </button>
+  </div>
+</body>
+</html>
